@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        Let's do some calculations <!--THIS JAVASCRIPT WILL HATE TO SEE ME COMING-->
+    </head>
+    <body>
+        <p>First things first, lets start with addition </p>
+        <p id="demo"></p><!--Always start with this id=demo so it can display on the web page-->
+        <script>
+            let a=45,b=34,c=a+b;//you can use let or var, depending on what you want to do//
+            document.getElementById('demo').innerHTML=c;/* There are many ways to output javascript, not just the document.getElementbyId. There's
+            the alert(), there's the console.log()and many more that I cannot remember now*/
+        </script>
+        <p>Great!!!!Let's elevate the concept, shall we?</p>
+        <p id="demo1"></p>
+        <script>
+            function addition(){
+                document.getElementById('demo1').innerHTML="You can now use functions in your code";//I'll need to familiarise myself with the concept though//
+            }
+        </script>
+        <button type="button"
+        onclick="addition()">Use me</button><!--I love me some buttins-->
+        <script>
+            alert("You will get there eventually");// This is where I used the alert display. That is why a message is popping up on the webpage//
+        </script>
+        <p>Let's get on with the calculations, shall we?</p><!--Some more arithmetic calculations-->
+        <p id="demo2"></p>
+        <script>
+           const v=4;
+           let t=24;
+           var S= v+t;
+            document.getElementById('demo2').innerHTML="The value of S is:" + S;
+        </script> 
+        <p id="demo3"></p>
+        <script>
+            const pi=3.14;//don't forget that a statment must end with ; within the script tag//
+            let person="Lynn wants a boyfriend";
+            let people="But boys are stupid";//Awoman who knows what she brings to the table is not afraid to sit alone//
+            document.getElementById('demo3').innerHTML= pi +"<br>"+ person+"<br>" + people;
+        </script>
+        <p id="demo4">
+            <script>
+                let name;
+                let carname="Peugeot 3008";//The car that I'll buy with my tech money cause I'm  a tech girlie//
+                let CARNAME="This is my dream car";
+                document.getElementById('demo4').innerHTML=carname+" " + CARNAME;
+            </script>
+            <p id="demo5"></p>
+            <script>
+                let x= 4+"3"+5;//If you add numbers with one of them having the " " then the number will be recognised as a string and not like a number//
+                document.getElementById('demo5').innerHTML=x;
+            </script>
+        <p id="demo6"></p>
+        <script>
+            const cash=["Mazda CX5","Mazda demio","Mazda CX3"];// This is an array in Javascript and it uses the data type CONST//
+            cash[1]="Mazda CX7";
+            cash.push("Mazda CX8");// this is the concept we learnt in data structures about the stacks and the push and pop operations//
+            cash.pop();cash.pop();
+            document.getElementById('demo6').innerHTML=cash;
+        </script>
+        <p id="demo7"</p>
+            <script>
+                let g=2;
+                let h=Math.pow(g,5);// This is what you use when you want to put power a number e.g 2^5//
+                document.getElementById("demo7").innerHTML=
+                h;
+            </script>
+            <br/>
+            <p><h2>How to input age?</h2></p>
+            <p id="demo8"></p>
+           
+            <input id="age" placeholder="do not lie">
+            <button type="button"
+            onclick="myage()">Submit!!</button><!--I think with time I'll get the hang of this buttons-->
+            <script>
+                function myage() {
+                    let age=document.getElementById("age").value;//I'll learn the conditions in Javascript when I get there. It's not hard//
+                    let voteable = (age<18)?"You are just a baby":"Tugokera tene tuigate Ruto";
+                    document.getElementById("demo8").innerHTML= voteable;
+                }
+            </script>
+            <br/>
+            <p id="demo9"></p>
+            <script>
+                let color = null;
+                let text = "missing";
+                let result=color??text;//I remember this concept is called the nulling colleascing or something..LOL!!Not sure//
+                document.getElementById("demo9").innerHTML="The name is"+" "+ result;
+            </script>
+            <p id="demo10"></p>
+            <script>
+                const individual= {/*This are objects in javascript...which reminds me the data type const is only used for variables who's values
+                are not to be changed. It is used in arrays as well...*/
+                    firstname:"Lynn",lastname:"Mungai",age:19
+                };
+                document.getElementById("demo10").innerHTML= "My name is" +" "+ individual.firstname+" "+individual.lastname+"<br>" + "I am" +" "+ individual.age;
+            </script>
+            <p id="demo11"></p>
+            <script>
+             document.getElementById("demo11").innerHTML=  typeof ""+"<br>"+typeof "Mazda CX5"+"<br>" +typeof 254;/*This typeof is used to output the 
+            datatype of what is intended to be displayed. eg."Mazda" is a type of a string etc*/
+             
+            </script>
+            <p id="demo12"></p>
+            <script>
+               function myidea(h,y) {//I love how functions make things easy for me, I'm still yet to get the hang of it//
+                    return h*y;
+                }
+                let add= myidea(4,5);
+                document.getElementById("demo12").innerHTML=add;
+            </script>
+            <p id="demo13"></p>
+            <script>
+                const specification={//some more OBJECTS in javascript//
+                    Name:"Lynn Mungai",
+                    Age:19,
+                    School:"Mount Kenya University",
+                    Position:"GOAT"
+                };
+                specification.nationality="Kenya";
+                document.getElementById("demo13").innerHTML="I am from"+" "+specification.nationality;//This is one of the ways to display the objects//
+            </script>
+            <p id="demo14"></p>
+            <script>
+                const Mungai = new Object();//This is another way to create objects in Javascript//
+                Mungai.Name ="Lynn Wanjiru Mungai";
+                Mungai.Mothersname ="Lucy Gathoni Gichohi";
+                Mungai.Fathersname ="Daniel Mungai Mwaura";
+                delete Mungai.Fathersname;//This is how you delete a value in an object//
+                Mungai.papaname="Munga"
+                document.getElementById("demo14").innerHTML="My name is"+" "+Mungai.Name+"<br/>"+
+                "My mother's name is"+" "+Mungai.Mothersname +"<br/>" + "My father's name is"+" "+Mungai["papaname"];
+            </script>
+            <p id="demo15"></p>
+            <script>
+                const myskills ={
+                    name:"John",
+                    age:30,
+                    skills:{//Nested objects...More like objects within an object//
+                        skill1:"HTML",
+                        skill2:"CSS",
+                        skill3:"Javascript",
+                        skill4:"PHP"
+                    }
+                }
+                document.getElementById("demo15").innerHTML= myskills.skills["skill2"]+"<br/>"+myskills.skills["skill4"];/*This is another way to displaying
+                values in an object*/
+            </script>
+            <p id="demo16"></p>
+            <script>
+                const description ={//This one has included a function in the objects//
+                    features:"Long hair",
+                    height: 165,//in centimetres
+                    personality: "Confident",//and that's on period!!!
+                    eyecolor: "brownish black",
+                    fulldescription: function () { 
+                        return "Lynn has"+" "+this.features+"<br/>"+
+                        "She is also"+" "+this.personality.toUpperCase();
+                    }
+                }
+                    document.getElementById("demo16").innerHTML= description.fulldescription();
+                
+            </script>
+            <!--Siku count na huko juu-->
+<!--THIS IS MY 6TH DAY LEARNING JS-->
+    </body>
+</html>
